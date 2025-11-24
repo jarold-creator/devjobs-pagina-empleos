@@ -36,7 +36,7 @@ Página web estática para búsqueda de empleos en el sector tecnológico con fi
 
 ## 🌐 Demo en Vivo
 
-[Ver sitio en Netlify](TU-URL-DE-NETLIFY-AQUI)
+[Ver sitio en Netlify](https://6923bf5e90de63393ebc037c--devjobs-jarold.netlify.app/)
 
 ## 💻 Desarrollo Local
 
