@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DevJobs - Encuentra tu próximo trabajo</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script type="module" src="./main.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex min-h-screen w-full flex-col">
+        <header
+            class="sticky top-0 z-10 border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <a class="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white"
+                            href="./index.html">
+                            <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <span>DevJobs</span>
+                        </a>
+                        <nav class="hidden md:flex items-center gap-6">
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                                href="./index.html">Inicio</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                                href="#">Empleos</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                                href="#">Empresas</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
+                                href="#">Salarios</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="rounded-lg bg-primary/10 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">Subir
+                            CV</button>
+                        <button class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBeG7G_fClYlNDdKTzEHA670Uh9TsfTwHCNng2nJOHZCsw_jzXKbuYg-ldPUGFyi06-RD8U4HtIew9rpl5T8KZpJLMfjHDm4EzNUz8rmjZK31QJTHhMqTY3_Kb8A2X_2zq_sDsq_v05AiSRHLlDPcyX1NmEoPCfW01ygMJcjz3gb0lUUZO_9qQq67stmy6-p1WbZReGs7T6RvlsxS_vN6KZi9UyUHJ80dTs-NADdsMxt3pXS8dF07JN11dXZAZp-UdqyFt7glf9jmA");'></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="mx-auto w-full max-w-7xl flex-grow px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <div class="mx-auto max-w-5xl">
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">Encuentra tu
+                        próximo trabajo</h1>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Explora miles de oportunidades en el sector
+                        tecnológico.</p>
+                </div>
+                <div class="mb-8 space-y-4">
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">
+                            search </span>
+                        <input id="search-jobs"
+                            class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 py-3 pl-12 pr-4 text-base placeholder-gray-500 focus:border-primary focus:ring-primary"
+                            placeholder="Buscar trabajos, empresas o habilidades" type="text" />
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <div class="relative">
+                            <button id="filter-tecnology"
+                                class="flex items-center gap-2 rounded-lg bg-gray-200/50 dark:bg-gray-700/50 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                <span>Tecnología</span>
+                                <span class="material-symbols-outlined text-base"> expand_more </span>
+                            </button>
+                            <!-- Dropdown de Tecnología -->
+                            <div id="dropdown-tecnology"
+                                class="hidden absolute top-full mt-2 w-64 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50">
+                                <div class="p-3 border-b border-gray-200 dark:border-gray-700">
+                                    <input type="text" id="search-tech" placeholder="Buscar tecnología..."
+                                        class="w-full rounded-md border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 px-3 py-2 text-sm placeholder-gray-500 focus:border-primary focus:ring-primary">
+                                </div>
+                                <div class="max-h-64 overflow-y-auto p-2">
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="JavaScript">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">JavaScript</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Python">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Python</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="React">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">React</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Node.js">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Node.js</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Java">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Java</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="TypeScript">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">TypeScript</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Vue.js">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Vue.js</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Angular">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Angular</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="SQL">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">SQL</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="MongoDB">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">MongoDB</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Docker">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Docker</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="tech-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="AWS">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">AWS</span>
+                                    </label>
+                                </div>
+                                <div class="p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2">
+                                    <button id="clear-tech-filters"
+                                        class="flex-1 rounded-md bg-gray-100 dark:bg-gray-700 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                        Limpiar
+                                    </button>
+                                    <button id="apply-tech-filters"
+                                        class="flex-1 rounded-md bg-primary px-3 py-2 text-sm font-medium text-white hover:bg-primary/80">
+                                        Aplicar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <button id="filter-location"
+                                class="flex items-center gap-2 rounded-lg bg-gray-200/50 dark:bg-gray-700/50 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                <span>Ubicación</span>
+                                <span class="material-symbols-outlined text-base"> expand_more </span>
+                            </button>
+                            <!-- Dropdown de Ubicación -->
+                            <div id="dropdown-location"
+                                class="hidden absolute top-full mt-2 w-64 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50">
+                                <div class="p-3 border-b border-gray-200 dark:border-gray-700">
+                                    <input type="text" id="search-location" placeholder="Buscar ubicación..."
+                                        class="w-full rounded-md border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 px-3 py-2 text-sm placeholder-gray-500 focus:border-primary focus:ring-primary">
+                                </div>
+                                <div class="max-h-64 overflow-y-auto p-2">
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Remoto">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Remoto</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Ciudad de México">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Ciudad de México</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Guadalajara">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Guadalajara</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Monterrey">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Monterrey</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Puebla">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Puebla</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Querétaro">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Querétaro</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Mérida">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Mérida</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="location-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Tijuana">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Tijuana</span>
+                                    </label>
+                                </div>
+                                <div class="p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2">
+                                    <button id="clear-location-filters"
+                                        class="flex-1 rounded-md bg-gray-100 dark:bg-gray-700 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                        Limpiar
+                                    </button>
+                                    <button id="apply-location-filters"
+                                        class="flex-1 rounded-md bg-primary px-3 py-2 text-sm font-medium text-white hover:bg-primary/80">
+                                        Aplicar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <button id="filter-contract"
+                                class="flex items-center gap-2 rounded-lg bg-gray-200/50 dark:bg-gray-700/50 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                <span>Tipo de contrato</span>
+                                <span class="material-symbols-outlined text-base"> expand_more </span>
+                            </button>
+                            <!-- Dropdown de Tipo de contrato -->
+                            <div id="dropdown-contract"
+                                class="hidden absolute top-full mt-2 w-64 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50">
+                                <div class="max-h-64 overflow-y-auto p-2">
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="contract-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Tiempo completo">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Tiempo completo</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="contract-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Medio tiempo">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Medio tiempo</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="contract-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Por proyecto">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Por proyecto</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="contract-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Freelance">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Freelance</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="contract-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Prácticas">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Prácticas</span>
+                                    </label>
+                                </div>
+                                <div class="p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2">
+                                    <button id="clear-contract-filters"
+                                        class="flex-1 rounded-md bg-gray-100 dark:bg-gray-700 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                        Limpiar
+                                    </button>
+                                    <button id="apply-contract-filters"
+                                        class="flex-1 rounded-md bg-primary px-3 py-2 text-sm font-medium text-white hover:bg-primary/80">
+                                        Aplicar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <button id="filter-experience"
+                                class="flex items-center gap-2 rounded-lg bg-gray-200/50 dark:bg-gray-700/50 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                <span>Nivel de experiencia</span>
+                                <span class="material-symbols-outlined text-base"> expand_more </span>
+                            </button>
+                            <!-- Dropdown de Nivel de experiencia -->
+                            <div id="dropdown-experience"
+                                class="hidden absolute top-full mt-2 w-64 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50">
+                                <div class="max-h-64 overflow-y-auto p-2">
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="experience-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Junior">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Junior (0-2 años)</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="experience-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Mid-level">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Mid-level (2-5
+                                            años)</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="experience-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Senior">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Senior (5+ años)</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700/50 cursor-pointer">
+                                        <input type="checkbox"
+                                            class="experience-checkbox rounded border-gray-300 dark:border-gray-600 text-primary focus:ring-primary"
+                                            value="Lead">
+                                        <span class="text-sm text-gray-700 dark:text-gray-200">Lead/Principal</span>
+                                    </label>
+                                </div>
+                                <div class="p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2">
+                                    <button id="clear-experience-filters"
+                                        class="flex-1 rounded-md bg-gray-100 dark:bg-gray-700 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                        Limpiar
+                                    </button>
+                                    <button id="apply-experience-filters"
+                                        class="flex-1 rounded-md bg-primary px-3 py-2 text-sm font-medium text-white hover:bg-primary/80">
+                                        Aplicar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Resultados de búsqueda</h2>
+                    <div
+                        class="jobs-list-setion divide-y divide-gray-200/50 dark:divide-gray-700/50 rounded-lg border border-gray-200/50 dark:border-gray-700/50 overflow-hidden">
+                        <!-- Los trabajos se cargarán dinámicamente desde data.json -->
+                        <div class="p-6 text-center">
+                            <p class="text-gray-500 dark:text-gray-400">Cargando trabajos...</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center pt-6">
+                        <nav id="pagination-container" aria-label="Pagination" class="flex items-center gap-2">
+                            <!-- Pagination will be rendered dynamically -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

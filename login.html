@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DevJobs - Sign In</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        display: ["Inter"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex min-h-screen flex-col">
+        <header
+            class="border-b border-gray-200/50 dark:border-gray-500/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <a class="flex items-center gap-2 text-primary" href="#">
+                            <svg class="h-7 w-7" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+                                DevJobs
+                            </h1>
+                        </a>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="#">Search</a>
+                        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="#">Companies</a>
+                        <a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                            href="#">About</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a class="hidden sm:inline-flex justify-center items-center h-10 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors"
+                            href="#">
+                            Post a job
+                        </a>
+                        <a class="inline-flex justify-center items-center h-10 px-4 rounded-lg bg-primary text-white text-sm font-bold hover:opacity-90 transition-opacity"
+                            href="#">
+                            Sign In
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-md space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Welcome Back</h2>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                        Log in to find your next opportunity.
+                    </p>
+                </div>
+                <div
+                    class="bg-background-light dark:bg-gray-800/20 p-8 rounded-xl border border-gray-200/50 dark:border-gray-500/20 shadow-sm">
+                    <form action="#" class="space-y-6" method="POST">
+                        <div>
+                            <label class="sr-only" for="email">Email address</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">mail</span>
+                                <input autocomplete="email"
+                                    class="form-input block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:outline-none focus:ring-primary focus:border-primary pl-10 h-12"
+                                    id="email" name="email" placeholder="Email" required="" type="email" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="sr-only" for="password">Password</label>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">lock</span>
+                                <input autocomplete="current-password"
+                                    class="form-input block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:outline-none focus:ring-primary focus:border-primary pl-10 h-12"
+                                    id="password" name="password" placeholder="Password" required="" type="password" />
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input
+                                    class="h-4 w-4 rounded border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-primary focus:ring-primary"
+                                    id="remember-me" name="remember-me" type="checkbox" />
+                                <label class="ml-2 block text-sm text-gray-900 dark:text-gray-300"
+                                    for="remember-me">Remember me</label>
+                            </div>
+                            <div class="text-sm">
+                                <a class="font-medium text-primary hover:text-primary/80" href="#">Forgot password?</a>
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                class="group relative flex w-full justify-center rounded-lg border border-transparent bg-primary py-3 px-4 text-sm font-bold text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-opacity"
+                                type="submit">
+                                Log In
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-6 relative">
+                        <div aria-hidden="true" class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span
+                                class="px-2 bg-background-light dark:bg-gray-800/10 text-gray-500 dark:text-gray-400 backdrop-blur-sm">Don't
+                                have an account?</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a class="w-full inline-flex justify-center py-2.5 px-4 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm bg-background-light dark:bg-background-dark text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                            href="#">
+                            Sign up as a developer
+                        </a>
+                        <a class="w-full inline-flex justify-center py-2.5 px-4 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm bg-background-light dark:bg-background-dark text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                            href="#">
+                            Sign up as a company
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

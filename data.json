@@ -1,0 +1,167 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Ingeniero de Software",
+      "company": "Tech Solutions Inc.",
+      "location": "Remoto",
+      "description": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Mid-level"
+    },
+    {
+      "id": 2,
+      "title": "Analista de Datos",
+      "company": "Data Driven Co.",
+      "location": "Ciudad de México",
+      "description": "Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización. Se requiere conocimiento en SQL, Python y R.",
+      "technologies": [
+        "Python",
+        "SQL"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Junior"
+    },
+    {
+      "id": 3,
+      "title": "Desarrollador de Aplicaciones Móviles",
+      "company": "Mobile Apps Ltd.",
+      "location": "Guadalajara",
+      "description": "Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.",
+      "technologies": [
+        "Java",
+        "TypeScript"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Mid-level"
+    },
+    {
+      "id": 4,
+      "title": "Ingeniero de DevOps",
+      "company": "Cloud Services SA",
+      "location": "Remoto",
+      "description": "Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure o GCP.",
+      "technologies": [
+        "AWS",
+        "Docker",
+        "Python"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Senior"
+    },
+    {
+      "id": 5,
+      "title": "Diseñador UX/UI",
+      "company": "Design Studio",
+      "location": "Monterrey",
+      "description": "Buscamos un diseñador UX/UI creativo con experiencia en diseño de interfaces y experiencia de usuario. Debe dominar Figma, Adobe XD y tener conocimientos de HTML/CSS.",
+      "technologies": [
+        "JavaScript",
+        "React"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Mid-level"
+    },
+    {
+      "id": 6,
+      "title": "Desarrollador Frontend",
+      "company": "Web Innovations",
+      "location": "Remoto",
+      "description": "Desarrollador frontend con experiencia en React, Vue.js y Angular. Buscamos alguien apasionado por crear interfaces de usuario modernas y responsivas.",
+      "technologies": [
+        "React",
+        "Vue.js",
+        "Angular"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Junior"
+    },
+    {
+      "id": 7,
+      "title": "Arquitecto de Software",
+      "company": "Enterprise Solutions",
+      "location": "Ciudad de México",
+      "description": "Arquitecto de software senior con experiencia en diseño de sistemas escalables y microservicios. Se requiere conocimiento profundo en patrones de diseño y arquitecturas cloud-native.",
+      "technologies": [
+        "Java",
+        "AWS",
+        "Docker"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Senior"
+    },
+    {
+      "id": 8,
+      "title": "Especialista en Seguridad",
+      "company": "CyberSec Corp",
+      "location": "Puebla",
+      "description": "Especialista en seguridad informática con experiencia en pruebas de penetración, análisis de vulnerabilidades y gestión de incidentes de seguridad.",
+      "technologies": [
+        "Python",
+        "JavaScript"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Mid-level"
+    },
+    {
+      "id": 9,
+      "title": "Desarrollador Backend",
+      "company": "API Masters",
+      "location": "Querétaro",
+      "description": "Desarrollador backend con experiencia en Node.js, Python o Java. Responsable de diseñar y mantener APIs RESTful y bases de datos.",
+      "technologies": [
+        "Node.js",
+        "Python",
+        "MongoDB"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Mid-level"
+    },
+    {
+      "id": 10,
+      "title": "Científico de Datos",
+      "company": "AI Research Lab",
+      "location": "Remoto",
+      "description": "Científico de datos con experiencia en machine learning, análisis estadístico y visualización de datos. Se requiere dominio de Python, R y frameworks de ML.",
+      "technologies": [
+        "Python",
+        "SQL"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Senior"
+    },
+    {
+      "id": 11,
+      "title": "Desarrollador Full Stack",
+      "company": "StartUp Innovators",
+      "location": "Guadalajara",
+      "description": "Desarrollador full stack con experiencia tanto en frontend como backend. Buscamos alguien versátil que pueda trabajar en todas las capas de la aplicación.",
+      "technologies": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Mid-level"
+    },
+    {
+      "id": 12,
+      "title": "Ingeniero de Machine Learning",
+      "company": "AI Solutions",
+      "location": "Remoto",
+      "description": "Ingeniero de ML con experiencia en desarrollo e implementación de modelos de machine learning. Se requiere conocimiento en TensorFlow, PyTorch y despliegue de modelos en producción.",
+      "technologies": [
+        "Python",
+        "AWS"
+      ],
+      "contract": "Tiempo completo",
+      "experience": "Senior"
+    }
+  ]
+}

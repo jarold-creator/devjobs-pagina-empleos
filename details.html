@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DevJobs - Job Offer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1173d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        display: ["Inter"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex flex-col min-h-screen">
+        <header
+            class="bg-background-light dark:bg-background-dark/50 backdrop-blur-sm sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center gap-8">
+                        <a class="flex items-center gap-2 text-gray-900 dark:text-white" href="#">
+                            <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <h1 class="text-xl font-bold">DevJobs</h1>
+                        </a>
+                        <nav class="hidden md:flex items-center gap-6">
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                                href="#">Inicio</a>
+                            <a class="text-sm font-medium text-primary dark:text-primary" href="#">Empleos</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                                href="#">Empresas</a>
+                            <a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                                href="#">Salarios</a>
+                        </nav>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden sm:block">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">
+                                search </span>
+                            <input
+                                class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 py-2 pl-10 pr-4 text-sm text-gray-900 dark:text-gray-100 focus:ring-primary focus:border-primary"
+                                placeholder="Buscar" type="text" />
+                        </div>
+                        <button
+                            class="hidden sm:flex items-center justify-center rounded-lg h-10 px-4 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30">
+                            Subir CV
+                        </button>
+                        <button class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwOEypD0TQ9ZoM7X0Nf78nO-1x1IdskZATK-9knq5ztzrpxRRt3tXWVckzFRHKqu6ByMLvWoF6U9aYx7a7aWg5AZcJehJce5rOkdkxBxrZQ3cuRqr89GTjfq7kDfPcONUAxcBHvtQJPfFOYOvJ3GULdh18g6uBKMEyLnJWK3mM9MSArhQegTnWNg4-c76rhC7WEw0O8by4SFDccpY_-JA13RYYOZQoiRWNDVYQVMjQIj5esBhOBXEF1HsMmmG28oTOf4xrqzKP4bU");'></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-8">
+                        <nav class="text-sm font-medium text-gray-500 dark:text-gray-400 flex items-center gap-2">
+                            <a class="hover:text-primary" href="#">Empleos</a>
+                            <span class="text-gray-400 dark:text-gray-600">/</span>
+                            <span class="text-gray-800 dark:text-gray-200">Ingeniero de Software Senior</span>
+                        </nav>
+                    </div>
+                    <div class="bg-background-light dark:bg-gray-900/50 rounded-lg p-6 md:p-8">
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-8">
+                            <div class="flex-1">
+                                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Ingeniero de
+                                    Software Senior</h1>
+                                <p class="text-lg text-gray-600 dark:text-gray-400 mt-1">Tech Solutions Inc. · Remoto
+                                </p>
+                            </div>
+                            <div class="flex-shrink-0 pt-1">
+                                <button
+                                    class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+                                    Aplicar ahora
+                                </button>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Descripción del puesto
+                                </h2>
+                                <p class="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                                    Tech Solutions Inc. está buscando un Ingeniero de Software Senior altamente motivado
+                                    y experimentado para unirse a nuestro equipo remoto. El candidato ideal
+                                    tendrá una sólida formación en desarrollo de software, con experiencia en el diseño,
+                                    desarrollo e implementación de soluciones de software escalables y de alto
+                                    rendimiento. Como Ingeniero de Software Senior, usted será responsable de liderar
+                                    proyectos de desarrollo, mentorizar a ingenieros junior y colaborar con equipos
+                                    multifuncionales para entregar productos de software de alta calidad.
+                                </p>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Responsabilidades</h2>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Diseñar, desarrollar y
+                                            mantener aplicaciones web utilizando tecnologías modernas.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Colaborar con equipos
+                                            de producto y diseño para definir y entregar nuevas características.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Escribir código limpio,
+                                            eficiente y bien documentado.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Realizar revisiones de
+                                            código y proporcionar retroalimentación constructiva a los miembros del
+                                            equipo.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Requisitos</h2>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Licenciatura en
+                                            Informática o campo relacionado.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Mínimo de 5 años de
+                                            experiencia en desarrollo de software.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Experiencia con
+                                            frameworks de JavaScript (por ejemplo, React, Angular, Vue.js).</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-primary mt-1"> check_circle </span>
+                                        <span class="text-base text-gray-700 dark:text-gray-300">Familiaridad con
+                                            metodologías ágiles y herramientas de control de versiones (por ejemplo,
+                                            Git).</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Acerca de la empresa
+                                </h2>
+                                <p class="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                                    Tech Solutions Inc. es una empresa de tecnología innovadora que se centra en la
+                                    creación de soluciones de software de vanguardia para diversas industrias. Estamos
+                                    comprometidos con el fomento de un entorno de trabajo colaborativo e inclusivo donde
+                                    cada empleado pueda prosperar y crecer profesionalmente. Ofrecemos salarios
+                                    competitivos, beneficios integrales y oportunidades de desarrollo profesional
+                                    continuo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6 flex justify-end">
+                            <button
+                                class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+                                Aplicar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
