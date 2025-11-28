@@ -8,17 +8,28 @@ export const filters = {
     experiences: []
 };
 
+// Normaliza texto (quita acentos y pasa a minúsculas)
+const normalize = s => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+
+// Comprueba coincidencia exacta dentro de las "partes" de la ubicación
+function matchLocationExact(jobLocation, filter) {
+    if (!jobLocation || !filter) return false;
+    const j = normalize(jobLocation);
+    const f = normalize(filter);
+    const parts = j.split(/[,\/\-\–\—\|]/).map(p => p.trim()).filter(Boolean);
+    return parts.some(p => p === f) || j === f;
+}
+
 /**
  * Apply all active filters to job cards
  */
 export async function applyAllFilters() {
     // Import pagination module
     const { setFilteredJobs, getCurrentPageJobs, renderPagination } = await import('./pagination.js');
-    const { renderJobs } = await import('./jobService.js');
+    const { renderJobs, fetchJobs } = await import('./jobService.js');
 
-    // Get all jobs from pagination module
-    const paginationModule = await import('./pagination.js');
-    const allJobs = paginationModule.default?.allJobs || [];
+    // Obtener todos los trabajos como fuente para construir filteredJobs
+    const allJobs = await fetchJobs();
 
     // If we don't have jobs yet, try to get them from DOM
     const jobCards = document.querySelectorAll('.job-card');
@@ -33,6 +44,8 @@ export async function applyAllFilters() {
         jobCards.forEach(card => {
             card.style.display = 'block';
         });
+        // Resetear paginación para mostrar todos los trabajos
+        try { setFilteredJobs(allJobs); renderPagination(); } catch (e) {}
         return;
     }
 
@@ -54,12 +67,13 @@ export async function applyAllFilters() {
             }
         }
 
-        // Filtrar por ubicación (OR dentro del mismo tipo)
+        // Filtrar por ubicación (OR dentro del mismo tipo) - comparación exacta normalizada
         if (filters.locations.length > 0 && shouldShow) {
-            const jobLocation = card.getAttribute('data-location');
-            if (!jobLocation || !filters.locations.includes(jobLocation.trim())) {
-                shouldShow = false;
-            }
+            const jobLocation = card.getAttribute('data-location') || '';
+            const matchAny = filters.locations.some(selectedLoc =>
+                matchLocationExact(jobLocation, selectedLoc)
+            );
+            if (!matchAny) shouldShow = false;
         }
 
         // Filtrar por tipo de contrato (OR dentro del mismo tipo)
@@ -82,8 +96,15 @@ export async function applyAllFilters() {
         card.style.display = shouldShow ? 'block' : 'none';
     });
 
-    // Update pagination after filtering
+    // Construir filteredJobs a partir de los job-cards visibles y notificar paginación
+    const visibleIds = Array.from(document.querySelectorAll('.job-card'))
+        .filter(c => c.style.display !== 'none')
+        .map(c => parseInt(c.getAttribute('data-id'), 10))
+        .filter(Boolean);
+
+    const filteredJobs = allJobs.filter(job => visibleIds.includes(job.id));
     try {
+        setFilteredJobs(filteredJobs);
         renderPagination();
     } catch (e) {
         // Pagination might not be initialized yet
@@ -156,7 +177,8 @@ function setupFilterDropdown(config) {
     if (applyBtn) {
         applyBtn.addEventListener('click', function () {
             const checkboxes = dropdown.querySelectorAll(`${checkboxClass}:checked`);
-            const selectedValues = Array.from(checkboxes).map(cb => cb.value);
+            // Trim values to avoid mismatches por espacios
+            const selectedValues = Array.from(checkboxes).map(cb => (cb.value || '').trim());
 
             filters[filterKey] = selectedValues;
             applyAllFilters();

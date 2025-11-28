@@ -55,9 +55,10 @@ export function renderJobs(jobs) {
 
         // Agregar atributos data-* para los filtros
         jobCard.setAttribute('data-technologies', job.technologies.join(','));
-        jobCard.setAttribute('data-location', job.location);
+        jobCard.setAttribute('data-location', (job.location || '').trim());
         jobCard.setAttribute('data-contract', job.contract);
         jobCard.setAttribute('data-experience', job.experience);
+        jobCard.setAttribute('data-id', String(job.id));
 
         jobCard.innerHTML = `
             <div class="flex flex-col sm:flex-row items-start justify-between gap-4">
